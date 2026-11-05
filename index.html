@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MORNING CLUB — кофе, десерты и хорошее настроение каждый день.">
+<title>MORNING CLUB — кофе, десерты и хорошее настроение</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#24211e;--cream:#f7f1e8;--orange:#f05b35;--pink:#f3b9ad;--lime:#d9e36a;--muted:#746d65;--line:#ded5c9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+header{height:82px;display:flex;align-items:center;border-bottom:1px solid var(--line);position:relative;z-index:5;background:var(--cream)}.nav{display:flex;align-items:center;justify-content:space-between}.logo{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-1.8px;font-size:25px;line-height:.9}.logo span{color:var(--orange)}.links{display:flex;gap:34px;font-size:13px;font-weight:700}.links a:hover{color:var(--orange)}.right{display:flex;align-items:center;gap:18px}.hours{font-size:11px;color:var(--muted);line-height:1.4;text-align:right}.cart{border:0;background:var(--ink);color:white;border-radius:99px;padding:12px 18px;font-size:12px;font-weight:700}.cart b{color:var(--lime);margin-left:8px}
+.hero{padding:58px 0 76px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:36px;align-items:center}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--orange);display:flex;align-items:center;gap:10px}.eyebrow:before{content:'';width:26px;height:2px;background:var(--orange)}h1,h2,h3,p{margin-top:0}h1{font-family:Manrope,sans-serif;font-size:clamp(58px,7.4vw,104px);line-height:.91;letter-spacing:-7px;margin:24px 0}.hero h1 em{font-style:normal;color:var(--orange)}.lead{max-width:390px;color:var(--muted);font-size:16px;line-height:1.7}.actions{display:flex;gap:12px;margin-top:30px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:99px;padding:16px 23px;background:var(--orange);color:white;font-weight:800;font-size:13px;transition:.2s}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #f05b3530}.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}.hero-note{font-size:11px;color:var(--muted);margin-top:34px}.hero-art{position:relative;min-height:500px}.hero-photo{position:absolute;inset:0 28px 0 0;border-radius:48% 48% 24px 24px;overflow:hidden;background:#e9c3a4}.hero-photo img{width:100%;height:100%;object-fit:cover}.sticker{position:absolute;right:0;top:45px;background:var(--lime);width:120px;height:120px;border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:800;font-size:13px;line-height:1.2;transform:rotate(12deg);border:1px solid var(--ink)}.floating{position:absolute;bottom:35px;left:-28px;background:white;padding:16px 20px;border-radius:16px;box-shadow:0 12px 35px #2d21191a;font-size:12px}.floating strong{display:block;font-size:19px;margin-bottom:3px}
+.marquee{background:var(--orange);color:white;padding:16px 0;overflow:hidden;white-space:nowrap;font-family:Manrope;font-size:19px;font-weight:800;letter-spacing:1px}.marquee span{padding:0 28px}.marquee i{font-style:normal;color:var(--lime)}
+section{padding:88px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}.section-top h2{font:800 clamp(38px,5vw,58px)/.98 Manrope;letter-spacing:-3px;margin:12px 0 0}.section-top p{color:var(--muted);max-width:280px;font-size:13px;line-height:1.6;margin:0}.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#fffaf3;border-radius:18px;padding:12px;position:relative;transition:.25s}.product:hover{transform:translateY(-5px)}.product-img{height:220px;border-radius:12px;overflow:hidden;background:#eee0d1}.product-img img{width:100%;height:100%;object-fit:cover;transition:.4s}.product:hover img{transform:scale(1.05)}.tag{position:absolute;top:22px;left:22px;background:var(--lime);border-radius:99px;padding:7px 10px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.7px}.product-info{padding:16px 5px 5px}.product-info h3{font:800 18px Manrope;margin:0 0 5px}.product-info p{color:var(--muted);font-size:11px;margin:0 0 16px}.product-bottom{display:flex;justify-content:space-between;align-items:center}.price{font-weight:800;font-size:16px}.add{width:36px;height:36px;border:0;border-radius:50%;background:var(--ink);color:white;font-size:21px;line-height:1}.add:hover{background:var(--orange)}
+.story{background:var(--pink)}.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story-image{height:480px;border-radius:22px;overflow:hidden;position:relative}.story-image img{width:100%;height:100%;object-fit:cover}.story-copy h2{font:800 clamp(42px,5vw,64px)/.98 Manrope;letter-spacing:-3px;margin:18px 0}.story-copy p{color:#594a45;line-height:1.8;font-size:14px;max-width:440px}.facts{display:flex;gap:36px;margin-top:32px}.fact strong{font:800 30px Manrope;display:block}.fact span{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#725d56}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.visit-card{background:var(--lime);border-radius:20px;padding:32px;min-height:260px}.visit-card.dark{background:var(--ink);color:white}.visit-card h3{font:800 32px Manrope;letter-spacing:-1.5px;margin:12px 0}.visit-card p{font-size:13px;line-height:1.7;max-width:330px;color:var(--muted)}.visit-card.dark p{color:#c9c2b8}.visit-card .btn{margin-top:12px}.visit-card.dark .btn{background:var(--lime);color:var(--ink)}
+footer{background:#e9e0d5;padding:32px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-copy{font-size:11px;color:var(--muted)}.social{display:flex;gap:20px;font-size:12px;font-weight:700}
+.cart-panel{position:fixed;right:20px;top:92px;width:min(360px,calc(100vw - 40px));background:#fffaf3;border:1px solid var(--line);box-shadow:0 18px 60px #21170f30;border-radius:18px;padding:20px;z-index:20;display:none}.cart-panel.open{display:block}.cart-head{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:18px}.close{border:0;background:transparent;font-size:24px}.cart-items{padding:16px 0;max-height:280px;overflow:auto}.cart-line{display:flex;justify-content:space-between;font-size:13px;padding:9px 0;border-bottom:1px solid var(--line)}.cart-total{display:flex;justify-content:space-between;font-weight:800;padding:14px 0}.empty{color:var(--muted);font-size:13px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:var(--ink);color:white;padding:12px 18px;border-radius:99px;font-size:12px;opacity:0;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.links{gap:16px}.hours{display:none}.hero-grid,.story-grid{grid-template-columns:1fr}.hero-art{min-height:420px}.hero-copy{padding-top:10px}.menu-grid{grid-template-columns:repeat(2,1fr)}.story-grid{gap:35px}.story-image{height:360px}}
+@media(max-width:560px){.wrap{width:min(100% - 32px,1180px)}header{height:70px}.links{display:none}.logo{font-size:22px}.hero{padding:38px 0 54px}.hero-grid{gap:25px}h1{font-size:64px;letter-spacing:-4.5px}.hero-art{min-height:350px}.hero-photo{right:15px}.sticker{width:88px;height:88px;font-size:10px}.floating{left:-8px;bottom:20px}.actions{flex-wrap:wrap}.section-top{display:block}.section-top p{margin-top:14px}.menu-grid{gap:10px}.product-img{height:155px}.product-info h3{font-size:15px}.product-info p{font-size:10px}.product{padding:8px}.tag{top:15px;left:15px;font-size:8px}.story-grid{gap:26px}.story-image{height:300px}.facts{gap:22px}.fact strong{font-size:25px}.visit-grid{grid-template-columns:1fr}.visit-card{min-height:220px;padding:25px}.footer-row{align-items:flex-start;flex-direction:column}section{padding:64px 0}}
+
+/* MOTION SYSTEM */
+:root{--ease:cubic-bezier(.22,.8,.25,1)}
+html{scroll-padding-top:24px}
+.marquee{display:flex;width:max-content;min-width:200%;animation:marqueeMove 24s linear infinite}
+.marquee:hover{animation-play-state:paused}
+@keyframes marqueeMove{to{transform:translateX(-33.333%)}}
+.hero-copy .eyebrow,.hero-copy h1,.hero-copy .lead,.hero-copy .actions,.hero-copy .hero-note{animation:heroRise .85s var(--ease) both}
+.hero-copy h1{animation-delay:.08s}.hero-copy .lead{animation-delay:.16s}.hero-copy .actions{animation-delay:.24s}.hero-copy .hero-note{animation-delay:.32s}
+.hero-art{animation:heroArtIn 1.1s var(--ease) both;animation-delay:.12s}
+@keyframes heroRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroArtIn{from{opacity:0;transform:translateY(35px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.sticker{animation:stickerFloat 5s ease-in-out infinite}
+@keyframes stickerFloat{0%,100%{transform:rotate(12deg) translateY(0)}50%{transform:rotate(5deg) translateY(-11px)}}
+.floating{animation:floatCard 4.5s ease-in-out infinite}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--delay,0ms)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-left{transform:translateX(-38px)}.reveal-right{transform:translateX(38px)}
+.reveal-left.is-visible,.reveal-right.is-visible{transform:translateX(0)}
+.product{will-change:transform;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.product:hover{transform:translateY(-9px) rotate(-.5deg);box-shadow:0 18px 34px #34241616}
+.product:nth-child(even):hover{transform:translateY(-9px) rotate(.5deg)}
+.product-img img,.story-image img{transition:transform .8s var(--ease),filter .8s var(--ease)}
+.product:hover .product-img img{transform:scale(1.09);filter:saturate(1.08)}
+.story-image{overflow:hidden}.story-image:hover img{transform:scale(1.055)}
+.btn,.cart,.add{position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s,background .3s}
+.btn:after,.cart:after,.add:after{content:"";position:absolute;inset:-60% auto -60% -45%;width:28%;transform:rotate(22deg);background:#ffffff50;transition:left .6s var(--ease)}
+.btn:hover:after,.cart:hover:after,.add:hover:after{left:130%}
+.add:active,.btn:active,.cart:active{transform:scale(.95)}
+.add{transition:transform .25s var(--ease),background .25s}
+.add.added{animation:addPop .38s var(--ease)}
+@keyframes addPop{50%{transform:scale(1.28) rotate(12deg)}}
+.cart-panel{display:block;visibility:hidden;opacity:0;transform:translateX(28px) scale(.98);transition:opacity .32s var(--ease),transform .42s var(--ease),visibility .42s;pointer-events:none}
+.cart-panel.open{visibility:visible;opacity:1;transform:translateX(0) scale(1);pointer-events:auto}
+#count.bump{display:inline-block;animation:countBump .35s var(--ease)}
+@keyframes countBump{50%{transform:scale(1.5);color:white}}
+.marquee{will-change:transform}
+@media(hover:hover){.hero-photo img{transition:transform .9s var(--ease)}.hero-photo:hover img{transform:scale(1.035)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">MORNING<br><span>CLUB.</span></a><nav class="links"><a href="#menu">МЕНЮ</a><a href="#story">О НАС</a><a href="#visit">КОНТАКТЫ</a></nav><div class="right"><div class="hours">КАЖДЫЙ ДЕНЬ<br>08:00 — 21:00</div><button class="cart" id="cartBtn">Корзина <b id="count">0</b></button></div></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">КОФЕЙНЯ ДЛЯ СВОИХ</div><h1>ДЕНЬ<br>НАЧИНАЕТСЯ<br><em>ВКУСНО.</em></h1><p class="lead">Спешелти-кофе, свежая выпечка и маленькие радости, ради которых хочется просыпаться.</p><div class="actions"><a class="btn" href="#menu">СМОТРЕТЬ МЕНЮ ↗</a><a class="btn secondary" href="#visit">НАЙТИ НАС</a></div><div class="hero-note">ХОРОШИЙ КОФЕ. СВОИ ЛЮДИ. НИКАКОЙ СУЕТЫ.</div></div><div class="hero-art"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85" alt="Уютная кофейня с чашкой кофе"></div><div class="sticker">MADE WITH<br>LOVE &<br>GOOD COFFEE</div><div class="floating"><strong>☕ 100%</strong>зерно свежей обжарки</div></div></div></section>
+<div class="marquee"><span>КОФЕ • ДЕСЕРТЫ • УЛЫБКИ <i>✳</i></span><span>КОФЕ • ДЕСЕРТЫ • УЛЫБКИ <i>✳</i></span><span>КОФЕ • ДЕСЕРТЫ • УЛЫБКИ <i>✳</i></span></div>
+<section id="menu"><div class="wrap"><div class="section-top"><div><div class="eyebrow">ЧТО БУДЕМ?</div><h2>ЛЮБИМЧИКИ<br>МЕНЮ.</h2></div><p>От первого утреннего капучино до десерта, который «ну последний кусочек».</p></div><div class="menu-grid">
+<article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=85" alt="Капучино"></div><span class="tag">ХИТ</span><div class="product-info"><h3>Капучино</h3><p>Двойной эспрессо · нежная молочная пена</p><div class="product-bottom"><span class="price">220 ₽</span><button class="add" data-name="Капучино" data-price="220">+</button></div></div></article>
+<article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Айс латте"></div><div class="product-info"><h3>Айс латте</h3><p>Эспрессо · холодное молоко · лёд</p><div class="product-bottom"><span class="price">260 ₽</span><button class="add" data-name="Айс латте" data-price="260">+</button></div></div></article>
+<article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt="Шоколадный торт"></div><span class="tag">НАДО БРАТЬ</span><div class="product-info"><h3>Шоколадный торт</h3><p>Насыщенный шоколад · крем · какао</p><div class="product-bottom"><span class="price">340 ₽</span><button class="add" data-name="Шоколадный торт" data-price="340">+</button></div></div></article>
+<article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=85" alt="Свежая выпечка"></div><div class="product-info"><h3>Круассан</h3><p>Слоёный, хрустящий, только из печи</p><div class="product-bottom"><span class="price">190 ₽</span><button class="add" data-name="Круассан" data-price="190">+</button></div></div></article>
+</div></div></section>
+<section class="story" id="story"><div class="wrap story-grid"><div class="story-image"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=85" alt="Бариста готовит кофе"></div><div class="story-copy"><div class="eyebrow">НЕ ПРОСТО КОФЕ</div><h2>МЕСТО,<br>ГДЕ ТЕБЯ<br><span style="color:var(--orange)">ЗНАЮТ.</span></h2><p>MORNING CLUB — это соседская кофейня с большим сердцем. Мы выбираем классное зерно, печём то, что любим сами, и верим: хороший день часто начинается с простого «тебе как обычно?».</p><p>Заглядывай за кофе по пути, оставайся на долгий разговор. У нас найдётся место и для ноутбука, и для друзей, и для тебя.</p><div class="facts"><div class="fact"><strong>8:00</strong><span>УЖЕ ОТКРЫТЫ</span></div><div class="fact"><strong>100%</strong><span>С ЛЮБОВЬЮ</span></div><div class="fact"><strong>1</strong><span>ТВОЯ КОФЕЙНЯ</span></div></div></div></div></section>
+<section id="visit"><div class="wrap"><div class="section-top"><div><div class="eyebrow">ЗАХОДИ В ГОСТИ</div><h2>ТВОЙ СТОЛИК<br>УЖЕ ЖДЁТ.</h2></div><p>Забегай за любимым напитком или оставайся на целый день.</p></div><div class="visit-grid"><div class="visit-card"><div class="eyebrow">МЫ ЗДЕСЬ</div><h3>Москва, ул. Примерная, 12</h3><p>Две минуты от метро. Найдёшь нас по аромату свежей выпечки.</p><a class="btn secondary" href="https://yandex.ru/maps/" target="_blank" rel="noreferrer">ПОСТРОИТЬ МАРШРУТ ↗</a></div><div class="visit-card dark"><div class="eyebrow">ЕСТЬ ВОПРОС?</div><h3>Давай на связи.</h3><p>Бронь столика, заказ большого торта или просто привет — напиши нам.</p><a class="btn" href="https://t.me/" target="_blank" rel="noreferrer">НАПИСАТЬ В TELEGRAM ↗</a></div></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><a class="logo" href="#">MORNING<br><span>CLUB.</span></a><div class="footer-copy">© 2026 MORNING CLUB. ДЕМО-САЙТ ДЛЯ ПОРТФОЛИО.</div><div class="social"><a href="https://vk.com/" target="_blank" rel="noreferrer">ВКОНТАКТЕ ↗</a><a href="https://t.me/" target="_blank" rel="noreferrer">TELEGRAM ↗</a></div></div></footer>
+<aside class="cart-panel" id="panel"><div class="cart-head">Твоя корзина <button class="close" id="close">×</button></div><div class="cart-items" id="items"><p class="empty">Пока здесь пусто. Самое время выбрать что-нибудь вкусное ☺</p></div><div class="cart-total"><span>Итого</span><span id="total">0 ₽</span></div><button class="btn" style="width:100%" id="checkout">ОФОРМИТЬ ЗАКАЗ ↗</button></aside><div class="toast" id="toast">Добавлено в корзину ☕</div>
+<script>
+const cart=[];const panel=document.getElementById('panel');const count=document.getElementById('count');const items=document.getElementById('items');const total=document.getElementById('total');const toast=document.getElementById('toast');
+function render(){count.textContent=cart.reduce((s,x)=>s+x.qty,0);items.innerHTML=cart.length?cart.map((x,i)=>'<div class="cart-line"><span>'+x.name+' × '+x.qty+'</span><strong>'+(x.price*x.qty)+' ₽</strong></div>').join(''):'<p class="empty">Пока здесь пусто. Самое время выбрать что-нибудь вкусное ☺</p>';total.textContent=cart.reduce((s,x)=>s+x.price*x.qty,0)+' ₽'}
+document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{const name=b.dataset.name,price=Number(b.dataset.price),found=cart.find(x=>x.name===name);found?found.qty++:cart.push({name,price,qty:1});render();toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1300)}));
+document.getElementById('cartBtn').onclick=()=>panel.classList.toggle('open');document.getElementById('close').onclick=()=>panel.classList.remove('open');
+document.getElementById('checkout').onclick=()=>{if(!cart.length){alert('Корзина пока пустая — добавь что-нибудь из меню!');return}alert('Это демонстрационная корзина. Для реального сайта подключим оформление заказа и оплату.');};
+</script>
+<script>
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealTargets = document.querySelectorAll(
+    '.section-top,.product,.story-image,.story-copy,.visit-card,.footer-row'
+  );
+  revealTargets.forEach((el,i) => {
+    el.classList.add('reveal');
+    el.style.setProperty('--delay', (el.classList.contains('product') ? (i%4)*85 : 0)+'ms');
+  });
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver((entries,observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
+      });
+    },{threshold:.13,rootMargin:'0px 0px -35px 0px'});
+    revealTargets.forEach(el=>io.observe(el));
+  } else revealTargets.forEach(el=>el.classList.add('is-visible'));
+
+  const count = document.getElementById('count');
+  const originalRender = window.render;
+  const observer = new MutationObserver(() => {
+    count.classList.remove('bump'); void count.offsetWidth; count.classList.add('bump');
+  });
+  observer.observe(count,{childList:true,characterData:true,subtree:true});
+
+  document.querySelectorAll('.add').forEach(btn => btn.addEventListener('click',()=>{
+    btn.classList.remove('added');void btn.offsetWidth;btn.classList.add('added');
+  }));
+  const art = document.querySelector('.hero-art');
+  const photo = document.querySelector('.hero-photo');
+  if(art && photo && window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce){
+    art.addEventListener('pointermove',e=>{
+      const r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      photo.style.transform='translate('+x*9+'px,'+y*9+'px)';
+    });
+    art.addEventListener('pointerleave',()=>photo.style.transform='translate(0,0)');
+  }
+})();
+</script>
+
+</body></html>
