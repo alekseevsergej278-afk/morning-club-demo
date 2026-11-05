@@ -301,4 +301,30 @@ document.getElementById('checkout').onclick=()=>{if(!cart.length){alert('Кор�
 })();
 
 </script>
+
+<script>
+(() => {
+  const film = document.querySelector('.coffee-hero-video');
+  if (!film) return;
+  film.muted = true;
+  film.defaultMuted = true;
+  film.playsInline = true;
+  film.setAttribute('muted', '');
+  film.setAttribute('playsinline', '');
+  film.preload = 'auto';
+  const startFilm = () => {
+    if (document.visibilityState === 'hidden') return;
+    const attempt = film.play();
+    if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+  };
+  film.addEventListener('loadeddata', startFilm, { once: true });
+  film.addEventListener('canplay', startFilm);
+  document.addEventListener('visibilitychange', startFilm);
+  window.addEventListener('pageshow', startFilm);
+  ['pointerdown', 'touchstart', 'keydown'].forEach(type =>
+    document.addEventListener(type, startFilm, { once: true, passive: true })
+  );
+  startFilm();
+})();
+</script>
 </body></html>
