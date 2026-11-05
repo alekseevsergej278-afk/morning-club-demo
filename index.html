@@ -111,46 +111,39 @@ html{scroll-padding-top:24px}
 @media(max-width:850px){.motion-cursor{display:none}.motion-reveal{filter:none;transform:translateY(22px)}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.motion-reveal{opacity:1;transform:none;filter:none;transition:none}.motion-image img{transition:none}.motion-cursor{display:none}}
 
+
+/* REAL COFFEE INTRO — macro photography, warm light and natural steam */
+.hero-art{isolation:isolate;min-height:520px;perspective:1000px}
+.hero-photo{inset:0 20px 0 0;border-radius:46% 46% 22px 22px;background:#24160f;box-shadow:0 32px 75px #4a2b1d26;isolation:isolate}
+.hero-photo:before{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,#1d100d1c 0%,transparent 36%,#1b100b38 100%),linear-gradient(115deg,#ffdbad20,transparent 42%);pointer-events:none}
+.hero-photo:after{content:"";position:absolute;z-index:3;inset:-8%;background:linear-gradient(112deg,transparent 34%,#fff0 44%,#fff5 50%,#fff1 54%,transparent 65%);transform:translateX(-75%) skewX(-13deg);mix-blend-mode:screen;animation:morningLensGlide 7.5s ease-in-out 1.4s 1 both;pointer-events:none}
+.hero-photo img{object-fit:cover;object-position:52% 58%;transform:scale(1.2);filter:saturate(.86) contrast(1.07) brightness(.86);animation:morningMacroPush 10s cubic-bezier(.18,.62,.25,1) .15s both;will-change:transform,filter}
+/* Soft, translucent steam ribbons: multiple layers drift at different speeds */
+.hero-photo .coffee-real-steam{position:absolute;z-index:2;left:54%;top:19%;width:30%;height:46%;pointer-events:none;filter:blur(7px);opacity:0;mix-blend-mode:screen;animation:morningSteamAppear 1.8s ease-out 1.2s forwards}
+.coffee-real-steam:before,.coffee-real-steam:after{content:"";position:absolute;bottom:0;width:42%;height:100%;border-radius:50%;border-left:9px solid #fff8ed55;filter:blur(8px);transform:rotate(12deg);animation:morningSteamDrift 4.8s ease-in-out infinite}
+.coffee-real-steam:after{left:36%;height:82%;border-left-width:6px;opacity:.65;animation-duration:6.2s;animation-delay:-2s;transform:rotate(-9deg)}
+.hero-photo .coffee-real-steam i{position:absolute;left:60%;bottom:4%;width:30%;height:85%;border-radius:50%;border-left:5px solid #fff7e955;filter:blur(6px);animation:morningSteamDrift 5.6s ease-in-out -1s infinite}
+.hero-photo .coffee-real-steam b{position:absolute;left:8%;bottom:8%;width:26%;height:75%;border-radius:50%;border-left:7px solid #fff8ef35;filter:blur(9px);animation:morningSteamDrift 6.5s ease-in-out -3s infinite}
+.hero-art:after{content:"";position:absolute;z-index:1;inset:8% 12% 0 4%;border-radius:50%;background:radial-gradient(ellipse at 58% 72%,#f5a35a22,transparent 52%);filter:blur(30px);pointer-events:none;animation:morningWarmGlow 6s ease-in-out infinite alternate}
+.sticker{animation:morningStickerIn .8s cubic-bezier(.16,1,.3,1) 1.1s both}
+.floating{animation:morningFloatIn .9s cubic-bezier(.16,1,.3,1) 1.45s both}
+@keyframes morningMacroPush{0%{transform:scale(1.2) translate3d(-1.3%,1.2%,0);filter:saturate(.65) contrast(1.02) brightness(.72)}55%{filter:saturate(.86) contrast(1.07) brightness(.88)}100%{transform:scale(1.045) translate3d(1%,-.5%,0);filter:saturate(.9) contrast(1.08) brightness(.94)}}
+@keyframes morningLensGlide{0%{transform:translateX(-75%) skewX(-13deg);opacity:0}18%{opacity:.9}70%{opacity:.5}100%{transform:translateX(75%) skewX(-13deg);opacity:0}}
+@keyframes morningSteamAppear{to{opacity:.8}}
+@keyframes morningSteamDrift{0%,100%{transform:translate3d(0,0,0) rotate(8deg) scaleY(.86);opacity:.28}50%{transform:translate3d(-10px,-22px,0) rotate(-8deg) scaleY(1.12);opacity:.72}}
+@keyframes morningWarmGlow{from{opacity:.45;transform:scale(.92)}to{opacity:1;transform:scale(1.08)}}
+@keyframes morningStickerIn{from{opacity:0;transform:rotate(28deg) scale(.65)}to{opacity:1;transform:rotate(12deg) scale(1)}}
+@keyframes morningFloatIn{from{opacity:0;transform:translate(-18px,20px)}to{opacity:1;transform:translate(0,0)}}
+@media(max-width:850px){.hero-art{min-height:460px}.hero-photo{inset:0 16px 0 0}.hero-photo img{object-position:55% 56%}}
+@media(max-width:560px){.hero-art{min-height:390px}.hero-photo{inset:0 12px 0 0}.hero-photo .coffee-real-steam{left:53%;top:16%;width:34%;height:43%}}
+@media(prefers-reduced-motion:reduce){.hero-photo img{animation:none;transform:scale(1.04);filter:none}.hero-photo:after,.hero-photo .coffee-real-steam,.hero-art:after,.sticker,.floating{animation:none!important}.hero-photo .coffee-real-steam{opacity:.5}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="logo" href="#">MORNING<br><span>CLUB.</span></a><nav class="links"><a href="#menu">МЕНЮ</a><a href="#story">О НАС</a><a href="#visit">КОНТАКТЫ</a></nav><div class="right"><div class="hours">КАЖДЫЙ ДЕНЬ<br>08:00 — 21:00</div><button class="cart" id="cartBtn">Корзина <b id="count">0</b></button></div></div></header>
 <main>
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">КОФЕЙНЯ ДЛЯ СВОИХ</div><h1>ДЕНЬ<br>НАЧИНАЕТСЯ<br><em>ВКУСНО.</em></h1><p class="lead">Спешелти-кофе, свежая выпечка и маленькие радости, ради которых хочется просыпаться.</p><div class="actions"><a class="btn" href="#menu">СМОТРЕТЬ МЕНЮ ↗</a><a class="btn secondary" href="#visit">НАЙТИ НАС</a></div><div class="hero-note">ХОРОШИЙ КОФЕ. СВОИ ЛЮДИ. НИКАКОЙ СУЕТЫ.</div></div><div class="hero-art"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85" alt="Уютная кофейня с чашкой кофе"></div><div class="sticker">MADE WITH<br>LOVE &<br>GOOD COFFEE</div><div class="floating"><strong>☕ 100%</strong>зерно свежей обжарки</div><div class="coffee-scene" aria-hidden="true">
-<svg viewBox="0 0 620 520" role="presentation">
-<defs>
- <linearGradient id="coffeeSkin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dca47d"/><stop offset="1" stop-color="#9a6048"/></linearGradient>
- <linearGradient id="coffeeCup" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf5"/><stop offset="1" stop-color="#d8c9b6"/></linearGradient>
-</defs>
-<!-- seated coffee lover -->
-<path d="M335 520 Q320 408 357 321 Q390 266 485 274 Q570 284 620 365 L620 520Z" fill="#59463d"/>
-<path d="M360 350 Q405 290 475 302 Q530 315 555 390 L520 520 L330 520Z" fill="#efe5d8"/>
-<path d="M401 118 Q427 62 491 75 Q548 89 549 157 L533 227 Q515 275 459 269 Q405 258 393 206Z" fill="#342720"/>
-<path d="M397 164 Q380 143 389 128 Q397 115 412 129 L420 148 Q438 153 446 168 Q451 183 436 194 L425 216 Q409 204 401 190Z" fill="url(#coffeeSkin)"/>
-<path d="M413 115 Q437 65 496 88 Q533 102 541 142 Q520 116 492 116 Q451 111 420 150Z" fill="#211a17"/>
-<path d="M440 176 Q451 170 463 177" fill="none" stroke="#241a16" stroke-width="5" stroke-linecap="round"/>
-<path d="M441 211 Q459 225 477 211" fill="none" stroke="#7d4438" stroke-width="4" stroke-linecap="round"/>
-<!-- arm and hand rise together with the cup -->
-<g class="coffee-sip-arm">
- <path d="M345 345 Q390 300 430 250 Q458 220 478 194 L516 220 Q496 271 462 306 Q420 359 383 390Z" fill="url(#coffeeSkin)"/>
- <path d="M468 193 Q481 177 497 184 L512 197 Q519 207 507 220 L487 228 Q470 224 463 211Z" fill="url(#coffeeSkin)"/>
- <path d="M475 183 Q488 174 503 184" fill="none" stroke="#f0c09a" stroke-width="5" stroke-linecap="round"/>
- <g class="coffee-cup">
-  <path d="M450 139 Q451 130 462 130 L532 130 Q544 130 542 143 L533 204 Q529 224 510 224 L482 224 Q463 222 460 204Z" fill="url(#coffeeCup)" stroke="#fff" stroke-width="4"/>
-  <path d="M539 148 Q579 140 576 174 Q573 202 535 197" fill="none" stroke="#e9dfd1" stroke-width="13"/>
-  <path d="M465 145 L531 145" stroke="#b67b4d" stroke-width="5" stroke-linecap="round"/>
-  <ellipse cx="497" cy="143" rx="31" ry="8" fill="#5a3528"/>
-  <path d="M485 143 Q497 130 510 143 Q498 155 485 143Z" fill="#f2e4ce"/>
-  <path d="M492 143 Q497 136 503 143" fill="none" stroke="#b67b4d" stroke-width="2"/>
- </g>
-</g>
-<!-- rising aroma -->
-<g class="coffee-steam" fill="none" stroke="#fff8ed" stroke-width="5" stroke-linecap="round" opacity=".8">
- <path d="M468 113 Q448 91 466 68 Q482 48 465 25"/>
- <path d="M497 111 Q518 87 499 65 Q486 48 505 28"/>
- <path d="M524 113 Q540 93 527 78"/>
-</g>
-</svg><span class="coffee-scene-caption">TAKE A MOMENT</span></div></div></div></section>
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">КОФЕЙНЯ ДЛЯ СВОИХ</div><h1>ДЕНЬ<br>НАЧИНАЕТСЯ<br><em>ВКУСНО.</em></h1><p class="lead">Спешелти-кофе, свежая выпечка и маленькие радости, ради которых хочется просыпаться.</p><div class="actions"><a class="btn" href="#menu">СМОТРЕТЬ МЕНЮ ↗</a><a class="btn secondary" href="#visit">НАЙТИ НАС</a></div><div class="hero-note">ХОРОШИЙ КОФЕ. СВОИ ЛЮДИ. НИКАКОЙ СУЕТЫ.</div></div><div class="hero-art"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=90" alt="Уютная кофейня с чашкой кофе"></div><div class="sticker">MADE WITH<br>LOVE &<br>GOOD COFFEE</div><div class="floating"><strong>☕ 100%</strong>зерно свежей обжарки</div><div class="coffee-scene" aria-hidden="true" style="display:none"></div><div class="coffee-real-steam" aria-hidden="true"><i></i><b></b></div></div></div></section>
 <div class="marquee"><div class="marquee-track"><span>КОФЕ <i class="sep">/</i> ДЕСЕРТЫ <i class="sep">/</i> УЛЫБКИ <i class="sep">/</i> МОМЕНТЫ ДЛЯ СЕБЯ <i class="sep">/</i></span><span>КОФЕ <i class="sep">/</i> ДЕСЕРТЫ <i class="sep">/</i> УЛЫБКИ <i class="sep">/</i> МОМЕНТЫ ДЛЯ СЕБЯ <i class="sep">/</i></span></div></div> <section id="menu"><div class="wrap"><div class="section-top"><div><div class="eyebrow">ЧТО БУДЕМ?</div><h2>ЛЮБИМЧИКИ<br>МЕНЮ.</h2></div><p>От первого утреннего капучино до десерта, который «ну последний кусочек».</p></div><div class="menu-grid">
 <article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=85" alt="Капучино"></div><span class="tag">ХИТ</span><div class="product-info"><h3>Капучино</h3><p>Двойной эспрессо · нежная молочная пена</p><div class="product-bottom"><span class="price">220 ₽</span><button class="add" data-name="Капучино" data-price="220">+</button></div></div></article>
 <article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Айс латте"></div><div class="product-info"><h3>Айс латте</h3><p>Эспрессо · холодное молоко · лёд</p><div class="product-bottom"><span class="price">260 ₽</span><button class="add" data-name="Айс латте" data-price="260">+</button></div></div></article>
