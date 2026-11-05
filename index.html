@@ -60,14 +60,25 @@ html{scroll-padding-top:24px}
 @media(hover:hover){.hero-photo img{transition:transform .9s var(--ease)}.hero-photo:hover img{transform:scale(1.035)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 
+
+/* Premium seamless coffee-house marquee */
+.marquee{position:relative;display:block;width:100%;min-width:0;animation:none!important;overflow:hidden;background:#f5eee4;color:#29251f;border-top:1px solid #d9cbbb;border-bottom:1px solid #d9cbbb;padding:17px 0;white-space:nowrap;font:700 12px Manrope,sans-serif;letter-spacing:.2em}
+.marquee:before,.marquee:after{content:"";position:absolute;z-index:2;top:0;bottom:0;width:58px;pointer-events:none}
+.marquee:before{left:0;background:linear-gradient(90deg,#f5eee4,transparent)}.marquee:after{right:0;background:linear-gradient(270deg,#f5eee4,transparent)}
+.marquee-track{display:flex;width:max-content;align-items:center;animation:marqueeMove 32s linear infinite;will-change:transform}
+.marquee-track>span{flex:none;padding:0 30px;color:#39332c}
+.marquee-track>span .sep{color:#c87945;padding-left:30px}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marqueeMove{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="logo" href="#">MORNING<br><span>CLUB.</span></a><nav class="links"><a href="#menu">МЕНЮ</a><a href="#story">О НАС</a><a href="#visit">КОНТАКТЫ</a></nav><div class="right"><div class="hours">КАЖДЫЙ ДЕНЬ<br>08:00 — 21:00</div><button class="cart" id="cartBtn">Корзина <b id="count">0</b></button></div></div></header>
 <main>
 <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">КОФЕЙНЯ ДЛЯ СВОИХ</div><h1>ДЕНЬ<br>НАЧИНАЕТСЯ<br><em>ВКУСНО.</em></h1><p class="lead">Спешелти-кофе, свежая выпечка и маленькие радости, ради которых хочется просыпаться.</p><div class="actions"><a class="btn" href="#menu">СМОТРЕТЬ МЕНЮ ↗</a><a class="btn secondary" href="#visit">НАЙТИ НАС</a></div><div class="hero-note">ХОРОШИЙ КОФЕ. СВОИ ЛЮДИ. НИКАКОЙ СУЕТЫ.</div></div><div class="hero-art"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85" alt="Уютная кофейня с чашкой кофе"></div><div class="sticker">MADE WITH<br>LOVE &<br>GOOD COFFEE</div><div class="floating"><strong>☕ 100%</strong>зерно свежей обжарки</div></div></div></section>
-<div class="marquee"><span>КОФЕ • ДЕСЕРТЫ • УЛЫБКИ <i>✳</i></span><span>КОФЕ • ДЕСЕРТЫ • УЛЫБКИ <i>✳</i></span><span>КОФЕ • ДЕСЕРТЫ • УЛЫБКИ <i>✳</i></span></div>
-<section id="menu"><div class="wrap"><div class="section-top"><div><div class="eyebrow">ЧТО БУДЕМ?</div><h2>ЛЮБИМЧИКИ<br>МЕНЮ.</h2></div><p>От первого утреннего капучино до десерта, который «ну последний кусочек».</p></div><div class="menu-grid">
+<div class="marquee"><div class="marquee-track"><span>КОФЕ <i class="sep">/</i> ДЕСЕРТЫ <i class="sep">/</i> УЛЫБКИ <i class="sep">/</i> МОМЕНТЫ ДЛЯ СЕБЯ <i class="sep">/</i></span><span>КОФЕ <i class="sep">/</i> ДЕСЕРТЫ <i class="sep">/</i> УЛЫБКИ <i class="sep">/</i> МОМЕНТЫ ДЛЯ СЕБЯ <i class="sep">/</i></span></div></div> <section id="menu"><div class="wrap"><div class="section-top"><div><div class="eyebrow">ЧТО БУДЕМ?</div><h2>ЛЮБИМЧИКИ<br>МЕНЮ.</h2></div><p>От первого утреннего капучино до десерта, который «ну последний кусочек».</p></div><div class="menu-grid">
 <article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=85" alt="Капучино"></div><span class="tag">ХИТ</span><div class="product-info"><h3>Капучино</h3><p>Двойной эспрессо · нежная молочная пена</p><div class="product-bottom"><span class="price">220 ₽</span><button class="add" data-name="Капучино" data-price="220">+</button></div></div></article>
 <article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Айс латте"></div><div class="product-info"><h3>Айс латте</h3><p>Эспрессо · холодное молоко · лёд</p><div class="product-bottom"><span class="price">260 ₽</span><button class="add" data-name="Айс латте" data-price="260">+</button></div></div></article>
 <article class="product"><div class="product-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt="Шоколадный торт"></div><span class="tag">НАДО БРАТЬ</span><div class="product-info"><h3>Шоколадный торт</h3><p>Насыщенный шоколад · крем · какао</p><div class="product-bottom"><span class="price">340 ₽</span><button class="add" data-name="Шоколадный торт" data-price="340">+</button></div></div></article>
